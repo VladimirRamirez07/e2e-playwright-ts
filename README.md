@@ -11,16 +11,24 @@ Automatización end-to-end de un e-commerce real (Sauce Demo) usando Playwright 
 - [GitHub Actions](https://github.com/features/actions) — CI/CD pipeline
 
 ## 📁 Estructura del proyecto
-tests/
-├── pages/              # Page Object Model
-│   ├── LoginPage.ts
-│   ├── InventoryPage.ts
-│   ├── CartPage.ts
-│   └── CheckoutPage.ts
-├── data/
-│   └── users.ts        # Datos de prueba
-├── login.spec.ts        # Tests de autenticación
-└── checkout.spec.ts     # Tests de flujo de compra
+
+    e2e-playwright-ts/
+    ├── .github/
+    │   └── workflows/
+    │       └── playwright.yml
+    ├── tests/
+    │   ├── pages/
+    │   │   ├── LoginPage.ts
+    │   │   ├── InventoryPage.ts
+    │   │   ├── CartPage.ts
+    │   │   └── CheckoutPage.ts
+    │   ├── data/
+    │   │   └── users.ts
+    │   ├── login.spec.ts
+    │   └── checkout.spec.ts
+    ├── playwright.config.ts
+    └── package.json
+
 ## 🧪 Casos de prueba
 
 ### Login
@@ -33,21 +41,23 @@ tests/
 
 ## 🚀 Correr los tests localmente
 
-```bash
-# Instalar dependencias
-npm install
-npx playwright install
+    # Instalar dependencias
+    npm install
+    npx playwright install
 
-# Correr todos los tests
-npx playwright test
+    # Correr todos los tests
+    npx playwright test
 
-# Solo en Chromium
-npx playwright test --project=chromium
+    # Solo en Chromium
+    npx playwright test --project=chromium
 
-# Ver reporte HTML
-npx playwright show-report
-```
+    # Ver reporte HTML
+    npx playwright show-report
 
 ## 🌐 Aplicación bajo prueba
 
 [Sauce Demo](https://www.saucedemo.com) — E-commerce de práctica para QA
+
+## 👤 Autor
+
+**Vladimir Ramirez** — [GitHub](https://github.com/VladimirRamirez07) · [LinkedIn](https://www.linkedin.com/in/vladimir-ramirez-303a433ba)
